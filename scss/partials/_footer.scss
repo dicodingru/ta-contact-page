@@ -1,0 +1,23 @@
+.footer {
+  align-items: flex-end;
+  background-color: $mist;
+  display: flex;
+  flex-flow: column nowrap;
+  grid-area: ft;
+  padding-right: 1rem;
+  text-align: right;
+
+  &__text {
+    display: block;
+  }
+
+  &__nav {
+    display: block;
+  }
+
+  &__link {
+    display: block;
+    font-weight: 600;
+    text-decoration: none;
+  }
+}

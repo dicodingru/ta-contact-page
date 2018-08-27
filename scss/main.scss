@@ -1,4 +1,11 @@
-body {
-  margin: 0;
-  padding: 0;
-}
+@import
+  'abstracts/variables',
+  'abstracts/mixins';
+@import 'vendor/hamburgers/hamburgers';
+@import 'base/base';
+@import
+  'partials/container',
+  'partials/header',
+  'partials/shops',
+  'partials/map',
+  'partials/footer';

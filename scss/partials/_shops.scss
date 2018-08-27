@@ -1,0 +1,60 @@
+.shops {
+  grid-area: sh;
+  height: auto;
+  padding: 1rem;
+
+  &__heading {
+    @include md {
+      display: block;
+    }
+    border-bottom: 1px dashed $honey;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  &__list {
+    align-items: center;
+    display: flex;
+    flex-flow: column nowrap;
+  }
+}
+
+.shop {
+  border-bottom: 1px solid $grey;
+  width: 100%;
+
+  &__link {
+    cursor: pointer;
+    display: block;
+    font-weight: 700;
+    text-align: center;
+    transition: 0.4s;
+
+    &:hover {
+      background-color: $honey;
+    }
+
+    &_active {
+      background-color: $honey;
+    }
+  }
+
+  &__body {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0.5rem 0;
+    transition: max-height 0.3s ease-out;
+  }
+
+  &__address {
+    padding: 0.5rem 0;
+  }
+
+  &__phone {
+    padding: 0.5rem 0;
+  }
+
+  &__hours {
+    padding: 0.5rem 0;
+  }
+}

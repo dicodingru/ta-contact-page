@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Lora:400,700|Merriweather:400,700&amp;subset=cyrillic,cyrillic-ext');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: $cerulean;
+  font-family: 'Lora', serif;
+  font-size: 18px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Merriweather', serif;
+}

@@ -1,0 +1,33 @@
+files:
+  include: 'scss/**/*.s+(a|c)ss'
+  ignore:
+    - node_modules/**
+options:
+  formatter: stylish
+  merge-default-rules: false
+rules:
+  border-zero:
+    - 1
+    - convention: zero
+  brace-style:
+    - 1
+    - allow-single-line: true
+  empty-line-between-blocks: 1
+  extends-before-declarations: 0
+  extends-before-mixins: 0
+  function-name-format: 1
+  leading-zero: 0
+  mixin-name-format: 1
+  mixins-before-declarations: 1
+  no-extends: 1
+  no-ids: 1
+  no-trailing-whitespace: 1
+  no-qualifying-elements: 0
+  one-declaration-per-line: 1
+  single-line-per-selector: 1
+  property-sort-order: 1
+  quotes:
+    - 1
+    - style: single
+  trailing-semicolon: 1
+  variable-name-format: 1

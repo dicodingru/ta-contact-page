@@ -1,0 +1,18 @@
+.container {
+  @include md {
+    grid-template-areas:
+    'hd hd hd hd hd hd'
+    'sh sh mp mp mp mp'
+    'ft ft ft ft ft ft';
+  }
+  background: $morning-sky;
+  display: grid;
+  grid-template-areas:
+  'hd hd hd hd hd hd'
+  'mp mp mp mp mp mp'
+  'sh sh sh sh sh sh'
+  'ft ft ft ft ft ft';
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: minmax(100px, auto);
+  min-height: 100vh;
+}

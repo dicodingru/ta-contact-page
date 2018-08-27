@@ -1,0 +1,66 @@
+.header {
+  @include sm {
+    grid-template-areas:
+    'lg sp nv nv nv nv'
+    'lg sp nv nv nv nv';
+  }
+  align-items: center;
+  background-color: $mist;
+  display: grid;
+  grid-area: hd;
+  grid-template-areas:
+  'lg sp sp sp sp hm'
+  'nv nv nv nv nv nv';
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: minmax(50px, auto);
+  padding: 0 1rem;
+
+  &__logo {
+    grid-area: lg;
+    height: 10vh;
+  }
+
+  &__space {
+    grid-area: sp;
+  }
+
+  &__nav {
+    @include sm {
+      display: block;
+    }
+    display: none;
+    grid-area: nv;
+  }
+
+  &__button {
+    @include sm {
+      display: none;
+    }
+    grid-area: hm;
+  }
+}
+
+.menu {
+  @include sm {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+
+  &__link {
+    border-radius: 0.5rem;
+    cursor: pointer;
+    margin-left: 0.5rem;
+    padding: .5rem;
+
+    &:hover {
+      background-color: $honey;
+    }
+
+    &_active {
+      background-color: $honey;
+    }
+  }
+}

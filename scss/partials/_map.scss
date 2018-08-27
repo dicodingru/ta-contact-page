@@ -1,0 +1,24 @@
+.map {
+  @include md {
+    border-left: 1px solid $cerulean;
+  }
+  grid-area: mp;
+  padding: 1rem;
+
+  &__heading {
+    border-bottom: 1px dashed $honey;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  &__container {
+    @include md {
+      min-height: 400px;
+    }
+    align-items: center;
+    display: flex;
+    flex-flow: column nowrap;
+    min-height: 200px;
+    padding-left: 1rem;
+  }
+}

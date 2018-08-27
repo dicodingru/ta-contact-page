@@ -1,24 +1,56 @@
 const gulp = require('gulp');
 const browserSync = require('browser-sync').create();
+const htmlhint = require('gulp-htmlhint');
 const sass = require('gulp-sass');
+const babel = require('gulp-babel');
 
 // Static server & watching scss/html files
-gulp.task('watch', ['sass'], function() {
+gulp.task('watch', ['html', 'sass', 'js', 'img'], () => {
   browserSync.init({
-    server: '.',
+    server: './public/',
   });
 
   gulp.watch('./scss/**/*.scss', ['sass'], browserSync.reload);
-  gulp.watch('./*.html').on('change', browserSync.reload);
-  gulp.watch('./js/**/*.js', browserSync.reload);
+  gulp.watch('./html/*.html', ['html'], browserSync.reload);
+  gulp.watch('./js/**/*.js', ['js'], browserSync.reload);
 });
 
-gulp.task('sass', function() {
+gulp.task('html', () => {
+  return gulp
+    .src('./html/*.html')
+    .pipe(htmlhint())
+    .pipe(htmlhint.reporter('htmlhint-stylish'))
+    .pipe(
+      htmlhint.failReporter({
+        supress: true,
+      })
+    )
+    .pipe(gulp.dest('./public/'))
+    .pipe(browserSync.stream());
+});
+
+gulp.task('sass', () => {
   return gulp
     .src('./scss/**/*.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('./css'))
+    .pipe(gulp.dest('./public/css/'))
     .pipe(browserSync.stream());
+});
+
+gulp.task('js', () => {
+  return gulp
+    .src('./js/**/*.js')
+    .pipe(
+      babel({
+        presets: ['env'],
+      })
+    )
+    .pipe(gulp.dest('./public/js/'))
+    .pipe(browserSync.stream());
+});
+
+gulp.task('img', () => {
+  gulp.src('./images/*').pipe(gulp.dest('./public/images'));
 });
 
 gulp.task('default', ['watch']);
