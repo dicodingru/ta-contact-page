@@ -28,8 +28,10 @@
     @include sm {
       display: block;
     }
+    align-self: flex-end;
     display: none;
     grid-area: nv;
+    margin: auto 0;
   }
 
   &__button {

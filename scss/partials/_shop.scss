@@ -1,0 +1,36 @@
+.shop {
+  border-bottom: 1px solid $grey;
+  width: 100%;
+
+  &__link {
+    cursor: pointer;
+    display: block;
+    font-weight: 700;
+    text-align: center;
+    transition: 0.4s;
+
+    &:hover {
+      background-color: $honey;
+    }
+
+    &_active {
+      background-color: $honey;
+    }
+  }
+
+  &__body {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0.5rem 0;
+    transition: max-height 0.3s ease-out;
+  }
+
+  &__body-item {
+    display: flex;
+    padding: 1rem 0.5rem 0 0.5rem;
+  }
+
+  &__icon {
+    margin-right: 1rem;
+  }
+}
