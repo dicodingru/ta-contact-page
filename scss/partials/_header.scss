@@ -54,6 +54,7 @@
     @include sm {
       display: none;
     }
+    align-self: flex-end;
     grid-area: hm;
   }
 }
