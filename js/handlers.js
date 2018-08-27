@@ -18,7 +18,8 @@ const toggleActiveShopLink = (links, activeIndex) => {
 };
 
 const showMap = (map, xy) => {
-  location.href = '#hamburger';
+  location.href = '#';
+  location.href = '#map';
   map.setCenter(xy, 13, { duration: 800 });
 };
 
