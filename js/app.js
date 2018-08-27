@@ -25,7 +25,7 @@ const shops = [
 
 const toggleHamburger = () => {
   const nav = document.getElementById('navigation');
-  nav.style.display = nav.style.display === 'none' ? 'block' : 'none';
+  nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
 };
 
 const toggleActiveShopLink = (links) => {

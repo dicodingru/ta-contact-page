@@ -3,13 +3,15 @@
     grid-template-areas:
     'lg sp nv nv nv nv'
     'lg sp nv nv nv nv';
-    max-height: 10vw;
+    max-height: 16vw;
     padding: 0.5rem 1rem;
   }
   @include lg {
+    max-height: 12vw;
     padding: 0.5rem 3rem;
   }
   @include xl {
+    max-height: 8.5vw;
     padding: 1rem 4rem;
   }
   align-items: center;
@@ -34,12 +36,18 @@
 
   &__nav {
     @include sm {
-      display: block;
+      display: block !important;
     }
     align-self: flex-end;
     display: none;
     grid-area: nv;
-    margin: auto 0;
+    margin: 0.5rem 0;
+  }
+
+  &__divider {
+    @include sm {
+      display: none;
+    }
   }
 
   &__button {
