@@ -1,10 +1,19 @@
 .footer {
+  @include sm {
+    max-height: 15vw;
+  }
+  @include lg {
+    padding: 0.5rem 3rem;
+  }
+  @include xl {
+    padding: 1rem 4rem;
+  }
   align-items: flex-end;
   background-color: $mist;
   display: flex;
   flex-flow: column nowrap;
   grid-area: ft;
-  padding-right: 1rem;
+  padding: 0.5rem 1rem;
   text-align: right;
 
   &__text {

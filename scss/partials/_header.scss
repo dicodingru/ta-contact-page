@@ -3,6 +3,14 @@
     grid-template-areas:
     'lg sp nv nv nv nv'
     'lg sp nv nv nv nv';
+    max-height: 10vw;
+    padding: 0.5rem 1rem;
+  }
+  @include lg {
+    padding: 0.5rem 3rem;
+  }
+  @include xl {
+    padding: 1rem 4rem;
   }
   align-items: center;
   background-color: $mist;

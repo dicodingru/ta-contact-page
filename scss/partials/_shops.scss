@@ -1,7 +1,17 @@
 .shops {
+  @include sm {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  @include lg {
+    padding-left: 3rem;
+  }
+  @include xl {
+    padding-left: 4rem;
+  }
   grid-area: sh;
   height: auto;
-  padding: 1rem;
+  padding: 0 1rem;
 
   &__heading {
     @include md {

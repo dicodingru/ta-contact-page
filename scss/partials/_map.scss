@@ -1,6 +1,15 @@
 .map {
+  @include sm {
+    padding: 1rem;
+  }
   @include md {
     border-left: 1px solid $cerulean;
+  }
+  @include lg {
+    padding-right: 3rem;
+  }
+  @include xl {
+    padding-right: 4rem;
   }
   grid-area: mp;
   padding: 1rem;
@@ -19,6 +28,5 @@
     display: flex;
     flex-flow: column nowrap;
     min-height: 200px;
-    padding-left: 1rem;
   }
 }
