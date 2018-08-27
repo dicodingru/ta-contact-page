@@ -16,6 +16,7 @@
     "browser-sync": "^2.24.6",
     "gulp": "^3.9.1",
     "gulp-babel": "^7.0.1",
+    "gulp-browserify": "^0.5.1",
     "gulp-htmlhint": "^2.1.1",
     "gulp-sass": "^4.0.1",
     "htmlhint-stylish": "^1.0.3",

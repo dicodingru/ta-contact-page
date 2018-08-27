@@ -3,6 +3,7 @@ const browserSync = require('browser-sync').create();
 const htmlhint = require('gulp-htmlhint');
 const sass = require('gulp-sass');
 const babel = require('gulp-babel');
+const browserify = require('gulp-browserify');
 
 // Static server & watching scss/html files
 gulp.task('watch', ['html', 'sass', 'js', 'img'], () => {
@@ -43,6 +44,12 @@ gulp.task('js', () => {
     .pipe(
       babel({
         presets: ['env'],
+      })
+    )
+    .pipe(
+      browserify({
+        insertGlobals: true,
+        debug: !gulp.env.production,
       })
     )
     .pipe(gulp.dest('./public/js/'))
